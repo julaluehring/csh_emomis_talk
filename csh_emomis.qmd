@@ -143,21 +143,21 @@ Different effects of emotions are overlooked by
 
 # Misinformation on social media
 
-## Social groups and collective emotions
+## Collective dynamics online
 
 
 -   Moralizing and arousing content gets high engagement
 
 -   Misinformation: conflict and negative
 
-    -   **But:** only 1-6% in 5 studies from 2016-2019
+    -   **But:** only 0.3-6% in 5 studies from 2016-2021
     -   Elite and ordinary partisan superspreaders
 
 
 ::: columns
 ::: {.column width="50%"}
 ::: fragment
-$\rightarrow$ Misinformation is embedded in intergroup dynamics
+$\rightarrow$ Misinformation is embedded in partisan intergroup dynamics
 
 $\rightarrow$ Secondary effects?
 
@@ -170,7 +170,7 @@ $\rightarrow$ Secondary effects?
 :::
 
 ::: footer
-Bail, [2021](https://press.princeton.edu/books/hardcover/9780691203423/breaking-the-social-media-prism); Baribi et al., [2024](https://www.science.org/doi/10.1126/science.adl4435); Leach & Zeineddine, [2021](https://link.springer.com/10.1007/s42761-021-00051-z); Mosleh et al. [2024](https://doi.org/10.1093/pnasnexus/pgae111); Robertson et al., [2023](https://www.nature.com/articles/s41586-023-06078-5); Zollo et al., [2015](https://dx.plos.org/10.1371/journal.pone.0138740)
+Allen et al., [2024](https://www.science.org/doi/full/10.1126/science.adk3451); Bail, [2021](https://press.princeton.edu/books/hardcover/9780691203423/breaking-the-social-media-prism); Baribi-Bartov et al., [2024](https://www.science.org/doi/10.1126/science.adl4435); Leach & Zeineddine, [2021](https://link.springer.com/10.1007/s42761-021-00051-z); Mosleh et al. [2024](https://doi.org/10.1093/pnasnexus/pgae111); Robertson et al., [2023](https://www.nature.com/articles/s41586-023-06078-5); Zollo et al., [2015](https://dx.plos.org/10.1371/journal.pone.0138740)
 :::
 
 ::: notes
@@ -313,15 +313,11 @@ Posts from Twitter/X mentioning any of 347 German news domains
 ## Machine learning classification
 
 
-![](images/daily_emotions_complete_smooth.png){width="600"}
+![](images/daily_emotions_rating_smoothed.png){width="600"}
 
 
-pol_emo_mDeBERTa (Widmann & Wich, 2022; Macro F1=0.7)
+pol_emo_mDeBERTa (Widmann & Wich, [2022](https://doi.org/10.1017/pan.2022.15); Macro F1=0.7)
 
-
-::: footer
-Lasser et al., [2023](http://arxiv.org/abs/2303.00357); Widmann & Wich, [2022](https://doi.org/10.1017/pan.2022.15)
-:::
 
 ::: notes
 We collected roughly 9 million twitter discussions where a German news domain was shared as the first tweet, with 20M tweets in total. For those news domains, we have a trustworthiness rating from NewsGuard, therefore, we understand misinformation here as news from untrustworthy sources
@@ -337,14 +333,36 @@ s
 In a second step, we wanted to zoom out again and look at the discussion starters in the unbalanced dataset and including news posts with no replies
 :::
 
-## Do posts with lower trustworthiness include more anger?
-
-![](images/initial_emo_coeff.png){width="600"}
+## Is trustworthiness associated with anger?
 
 
-$\rightarrow$ Lower trustworthiness = anger
 
-$\rightarrow$ Higher trustworthiness = joy
+::: columns
+
+::: {.column width="60%"}
+
+![](images/emo_in_post_coeff_boot.png){width="600"}
+
+
+:::
+
+::: {.column width="40%"}
+
+::: fragment
+
+![](images/anger_score_loess.png){width="1000"}
+
+:::
+
+:::
+
+:::
+
+<br>
+
+$\rightarrow$ Trustworthiness predicts a 15% decrease in anger but something is off!
+
+
 
 ::: notes
 We especially wanted to see if tweets with a lower trustworthiness score also included more anger, explaining why there is more anger in the discussion
@@ -373,7 +391,7 @@ While joy increases when trustworthiness increases
 ![](images/reply_distributions.png){width="300"}
 :::
 
-$\rightarrow$ Untrustworthy sources get more retweets and quotes
+$\rightarrow$ 58% decrease in retweets and 43% decrease in quotes
 :::
 
 ::: footer
@@ -393,9 +411,9 @@ Here, we included the zero replies, which zero-inflated the distribution, which 
 
 # Part III: Emotional responses
 
-# A) Descriptives
+# A) Correlations
 
-## Emotional response reflect emotions in post
+## Emotional response reflects emotion in post
 
 ![](images/emo_coeffs.png){width="900"} 
 
@@ -484,7 +502,7 @@ $\rightarrow$ Less joy
 <br>
 <br>
 
-$\rightarrow$ More anger
+$\rightarrow$ 2% more anger
 
 :::
 :::
