@@ -724,11 +724,23 @@
 </section>
 <section id="emotional-response-reflect-emotions-in-post" class="slide level2">
 <h2>Emotional response reflect emotions in post</h2>
-<p><img data-src="images/emo_coeffs.png" width="1000"> <span class="math inline">\(\rightarrow\)</span> Does trustworthiness actually affect emotional reactions?</p>
+
+<img data-src="images/emo_coeffs.png" width="900" class="r-stretch"><p><span class="math inline">\(\rightarrow\)</span> Does trustworthiness actually affect emotional reactions?</p>
 </section></section>
 <section>
 <section id="b-causal-inference" class="title-slide slide level1 center">
 <h1>B) Causal inference</h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment">
+<p><img data-src="images/randomization.png" width="300"></p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p><img data-src="images/matching.png" width="300"></p>
+</div>
+</div>
+</div>
 <aside class="notes">
 <p>Now, we are zooming in on the tweets that got at least one reply and the following discussion thread</p>
 <style type="text/css">
@@ -751,7 +763,7 @@
 </div><div class="column" style="width:30%;">
 <p>Nearest Neighbor and Mahalanobis distance</p>
 <p><span class="math inline">\(\rightarrow\)</span> <em>N</em> = 87,132</p>
-</div><p>Conditions: Untrustworthy vs.&nbsp;trustworthy (&gt;60)</p><p>Covariates: PO, word count, following/followers, time difference, emotions</p>
+</div><p>Covariates: PO, word count, following/followers, time difference, emotions in post</p>
 </div>
 <div class="footer">
 <p>Ho et al., <a href="https://www.cambridge.org/core/journals/political-analysis/article/matching-as-nonparametric-preprocessing-for-reducing-model-dependence-in-parametric-causal-inference/4D7E6D07C9727F5A604E5C9FCCA2DD21">2007</a></p>
@@ -779,11 +791,16 @@
 <h2>Does trustworthiness affect emotional responses?</h2>
 <div class="columns">
 <div class="column" style="width:75%;">
-<p><img data-src="images/mean_emotion_matched-95.png" width="600"> <sub>Models:&nbsp;OLS&nbsp;regressions</sub></p>
+<p><img data-src="images/mean_emotion_matched-95.png" width="800"></p>
 </div><div class="column" style="width:25%;">
-<p><span class="math inline">\(\rightarrow\)</span> More anger and out-group references</p>
+<p><br> <br> <br></p>
 <p><span class="math inline">\(\rightarrow\)</span> Less joy</p>
+<p><br> <br> <br> <br></p>
+<p><span class="math inline">\(\rightarrow\)</span> More anger</p>
 </div>
+</div>
+<div class="footer">
+<p>TBD: responses within-users (responding to trustworthy and untrustworthy posts), see Carrella et al., <a href="https://osf.io/qx34w">2023</a></p>
 </div>
 <aside class="notes">
 <p>So, do emotions differ based on trustworthiness?</p>
@@ -803,9 +820,24 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="c-direction-of-anger" class="slide level2">
-<h2>C) Direction of anger</h2>
-<p>TBD! Who is the anger directed at? Interactions and angry tweets!</p>
+<section id="c-direction-of-anger-tbd" class="slide level2">
+<h2>C) Direction of anger (TBD)</h2>
+<p><img data-src="images/emotion_outgroup_facet.png" width="2000"> Out-group classification (Lasser at al., 2023; F1=0.8)</p>
+</section>
+<section id="c-origin-of-anger-tbd" class="slide level2">
+<h2>C) Origin of anger (TBD)</h2>
+<div class="columns">
+<ul>
+<li>How do people talk in most angry discussions? Do they counterargue?</li>
+</ul><div class="column" style="width:60%;">
+<ul>
+<li><p>What are the topics in the first post?</p></li>
+<li><p>Do the discussion networks differ (see Gonzalez-Bailon et al., <a href="https://doi.org/10.1057/jit.2010.2">2010</a>)?</p></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="images/four-types-of-discussions.png" width="700"></p>
+</div>
+</div>
 </section></section>
 <section>
 <section id="conclusion-tentative" class="title-slide slide level1 center">
@@ -815,12 +847,12 @@
 <section id="emotions-rightarrow-emotions-rightarrow-engagement" class="slide level2">
 <h2>Emotions <span class="math inline">\(\rightarrow\)</span> emotions <span class="math inline">\(\rightarrow\)</span> engagement?</h2>
 <ul>
-<li>Sources with low trustworthiness predict anger and out-group references</li>
+<li>Sources with low trustworthiness predict anger</li>
 <li>Emotions in discussions largely reflect emotions in initial post</li>
-<li>Is engagement with low trustworthiness due to covariates?</li>
+<li>Is engagement with low trustworthiness due to other factors?</li>
 </ul>
 <p><span class="math inline">\(\rightarrow\)</span> Not the factfulness is harmful, but the content</p>
-<p><span class="math inline">\(\rightarrow\)</span> Misinformation is a perfect tool to spread harmful content</p>
+<p><span class="math inline">\(\rightarrow\)</span> Misinformation is a perfect tool to spread hateful content</p>
 <aside class="notes">
 <ul>
 <li>Low trustworthiness predicts anger and conflict in discussions</li>
@@ -838,28 +870,18 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="up-next" class="slide level2">
-<h2>Up next</h2>
-<ul>
-<li>responses within-users (responding to trustworthy and untrustworthy posts)</li>
-<li>bootstrapping</li>
-<li>marginal effects plots</li>
-<li>characterizing the full discussion trees</li>
-<li>other classifications: topics, toxicity, morality?</li>
-</ul>
-<div class="footer">
-<p>Carrella et al., <a href="https://osf.io/qx34w">2023</a>; Gonzalez-Bailon et al., <a href="https://doi.org/10.1057/jit.2010.2">2010</a></p>
-</div>
 </section></section>
 <section>
 <section id="thank-you" class="title-slide slide level1 center">
 <h1>Thank you!</h1>
 <div class="columns">
 <div class="column" style="width:60%;">
+<p>Email: <a href="jula.luehring@univie.ac.at">jula.luehring@univie.ac.at</a></p>
+<p>Bluesky: <a href="https://bsky.app/profile/julaluehring.bsky.social">@julaluehring.bsky.social</a></p>
+<p>X: <a href="https://twitter.com/lue_jula">@lue_jula</a></p>
 <p><img data-src="logos/logos-combined.png" width="600"></p>
 </div><div class="column" style="width:40%;">
-
+<p><img data-src="images/frame.png" width="600"></p>
 </div>
 </div>
 </section>
