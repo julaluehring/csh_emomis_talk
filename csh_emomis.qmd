@@ -53,9 +53,11 @@ Altay et al., [2023](https://doi.org/10.1177/20563051221150412); Ecker et al., [
 ::: notes
 -   So when we talk about misinformation, we usually refer to inaccurate information, regardless of the intention.
 
--   Despite concerns about misinformation, it now seems as a symptom of a clustered information ecosystem where few people are exposed to misinformation, while most people have partisan information diets, including decontextualized but not completely inaccurate information
+-   People have a lot of reasons to believe in misinformation, but there is more and more evidence showing that one of the strongest predictors is partisanship 
 
--   In this process, a missing link are emotions
+-   Therefore, misinformation is now understood as a symptom of a clustered information ecosystem where few people are exposed to misinformation, while most people have partisan information diets, including decontextualized but not completely inaccurate information
+
+-   In partisan-based information processing, emotions play a very important role
 
 -   While arousing, mobilizing emotions signal us to better select, process and memorize vital information
 
@@ -99,9 +101,15 @@ Luehring\*, Shetty\*, et al., [2023](https://psyarxiv.com/udqms/); Martel et al.
 
 ## Emotional response 
 
+$\rightarrow$ More anger and less joy in response to false news
+
+
+::: fragment
+
 🗯 *"Bullshit", "Fake"*
 
-![](images/curvi-linear.svg){width="900"}
+![](images/curvi-linear.svg){width="800"}
+::: 
 
 ::: fragment 
 
@@ -109,12 +117,14 @@ Luehring\*, Shetty\*, et al., [2023](https://psyarxiv.com/udqms/); Martel et al.
 
 ::: {.column width="70%"}
 
+
 $\rightarrow$ Function of emotion depends on existing beliefs
 
 :::
 
+
 ::: {.column width="30%"}
-![](images/mediating-relationship.png){width="1000"}
+![](images/mediating-relationship.png){width="300"}
 :::
 
 :::
@@ -124,6 +134,18 @@ $\rightarrow$ Function of emotion depends on existing beliefs
 ::: footer
 Luehring\*, Shetty\*, et al., [2023](https://psyarxiv.com/udqms/); Van Damme & Smets, [2014](https://psycnet.apa.org/record/2013-39652-001)
 :::
+
+::: notes
+
+But we also looked at the emotional response as a more immediate measure of emotions and we found more anger and less joy in response to the false items
+
+However, we also included some open-ended items and we found that people reacted with disbelief, they said things like bullshit or nonse
+
+So here in this plot you can see a non-linear relationship between discernment and anger, and we can see that people who were really good at discerning true from false and the ones who were really bad at it got angry
+
+Therefore, the function of emotions depends on prior beliefs and it mediates the effect of misinformation
+
+::: 
 
 ## Problem #1
 
@@ -198,9 +220,10 @@ Allen et al., [2024](https://www.science.org/doi/full/10.1126/science.adk3451); 
 ![](images/newsguard-quadrant.png){width="3000"}
 :::
 
+
 ::: {.column width="40%"}
 
-::: fragment
+::: fragment 
 
 ![](images/bias.png){width="300"}
 
@@ -208,10 +231,9 @@ Allen et al., [2024](https://www.science.org/doi/full/10.1126/science.adk3451); 
 
 :::
 
+::: 
 
-:::
-
-::: fragment
+::: fragment 
 
 $\rightarrow$ How do these choices influence downstream research results?
 
@@ -247,7 +269,7 @@ Misinformation is measured as clearly true or false instances,
 :::
 
 ::: footer
-Allen et al., [2024](https://www.science.org/doi/10.1126/science.adk3451); van der Linden & Krychenko, [2024](https://www.science.org/doi/10.1126/science.adp9117)
+Allen et al., [2024](https://www.science.org/doi/10.1126/science.adk3451); Altay et al., [2023](https://doi.org/10.1177/20563051221150412); van der Linden & Krychenko, [2024](https://www.science.org/doi/10.1126/science.adp9117)
 :::
 
 ::: notes
@@ -298,6 +320,7 @@ Posts from Twitter/X mentioning any of 347 German news domains
 <br>
 
 *N* = 9.3M discussions (20.6M tweets total)
+
 93.8% trustworthy (>60)
 
 :::
@@ -321,7 +344,7 @@ pol_emo_mDeBERTa (Widmann & Wich, [2022](https://doi.org/10.1017/pan.2022.15); M
 
 ::: notes
 We collected roughly 9 million twitter discussions where a German news domain was shared as the first tweet, with 20M tweets in total. For those news domains, we have a trustworthiness rating from NewsGuard, therefore, we understand misinformation here as news from untrustworthy sources
-s
+
 -   For each tweet, we then classified 8 distinct emotions and out-group references from text
 -   This plot shows the covered time frame from October 2020 to March 2022 and we can already see that anger is overall much higher
 :::
@@ -330,7 +353,7 @@ s
 # Part I: Emotion in the post
 
 ::: notes
-In a second step, we wanted to zoom out again and look at the discussion starters in the unbalanced dataset and including news posts with no replies
+In a first step of analysis, we look at whether trustworthiness predicts the emotion in the post 
 :::
 
 ## Is trustworthiness associated with anger?
@@ -343,6 +366,9 @@ In a second step, we wanted to zoom out again and look at the discussion starter
 
 ![](images/emo_in_post_coeff_boot.png){width="600"}
 
+<br>
+
+$\rightarrow$ Trustworthiness predicts a 15% decrease in anger
 
 :::
 
@@ -352,20 +378,21 @@ In a second step, we wanted to zoom out again and look at the discussion starter
 
 ![](images/anger_score_loess.png){width="1000"}
 
-:::
-
-:::
-
-:::
-
 <br>
 
-$\rightarrow$ Trustworthiness predicts a 15% decrease in anger but something is off!
+But gray-area content matters, too!
+
+:::
+
+:::
+
+:::
+
 
 
 
 ::: notes
-We especially wanted to see if tweets with a lower trustworthiness score also included more anger, explaining why there is more anger in the discussion
+We especially wanted to see if tweets with a lower trustworthiness score also included more anger
 
 And that's also what we found!
 
@@ -450,6 +477,8 @@ Now, we are zooming in on the tweets that got at least one reply and the followi
 
 ## Nonparametric matching
 
+<br>
+
 ::: columns
 ::: {.column width="70%"}
 ![](images/mahalanobis_plot_wd.png){width="700"}
@@ -461,7 +490,6 @@ Nearest Neighbor and Mahalanobis distance
 $\rightarrow$ *N* = 87,132
 :::
 
-Covariates: PO, word count, following/followers, time difference, emotions in post
 :::
 
 ::: footer
